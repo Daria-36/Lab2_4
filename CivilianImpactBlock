@@ -1,0 +1,31 @@
+package model.blocks;
+
+public class CivilianImpactBlock {
+    private int evacuated;
+    private int injured;
+    private int missing;
+    private String publicExposureRisk;
+    
+    public CivilianImpactBlock() {
+        this.evacuated = 0;
+        this.injured = 0;
+        this.missing = 0;
+    }
+    
+    public int getEvacuated() { return evacuated; }
+    public void setEvacuated(int evacuated) { this.evacuated = evacuated; }
+    
+    public int getInjured() { return injured; }
+    public void setInjured(int injured) { this.injured = injured; }
+    
+    public int getMissing() { return missing; }
+    public void setMissing(int missing) { this.missing = missing; }
+    
+    public String getPublicExposureRisk() { return publicExposureRisk; }
+    public void setPublicExposureRisk(String publicExposureRisk) { this.publicExposureRisk = publicExposureRisk; }
+    
+    public String toString() {
+        return String.format("Эвакуировано: %d | Пострадавшие: %d | Пропавшие: %d | Риск раскрытия: %s",
+            evacuated, injured, missing, publicExposureRisk);
+    }
+}
